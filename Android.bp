@@ -1,0 +1,141 @@
+android_app_import {
+    name: "MotCamera2",
+    owner: "motorola",
+    apk: "proprietary/product/priv-app/MotCamera2/MotCamera2.apk",
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    required: [
+        "MotoSignatureApp",
+        "com.motorola.camera2.denali",
+        "deviceowner-configuration-com.motorola.camera2",
+        "privapp-permissions-com.motorola.camera2",
+        "hiddenapi-whitelist-com.motorola.camera2",
+        "libmcf_native_window_helper.motocamera",
+        "com.motorola.androidx.camera.extensions",
+    ],
+    product_specific: true,
+    overrides: ["Snap", "Snap2", "SnapdragonCamera", "SnapdragonCamera2", "Camera", "Camera2"],
+}
+
+android_app_import {
+    name: "MotoSignatureApp",
+    owner: "motorola",
+    apk: "proprietary/product/app/MotoSignatureApp/MotoSignatureApp.apk",
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    required: [
+        "com.motorola.motosignature_permissions",
+        "com.motorola.motosignature",
+    ],
+    product_specific: true,
+}
+
+prebuilt_etc {
+    name: "com.motorola.androidx.camera.extensions_permissions",
+    owner: "motorola",
+    sub_dir: "permissions",
+    src: "proprietary/product/etc/permissions/com.motorola.androidx.camera.extensions.xml",
+    filename_from_src: true,
+    product_specific: true,
+}
+
+prebuilt_etc {
+    name: "com.motorola.camera2.denali",
+    owner: "motorola",
+    sub_dir: "permissions",
+    src: "proprietary/product/etc/permissions/com.motorola.camera2.denali.xml",
+    filename_from_src: true,
+    product_specific: true,
+}
+
+prebuilt_etc {
+    name: "com.motorola.motosignature_permissions",
+    owner: "motorola",
+    sub_dir: "permissions",
+    src: "proprietary/product/etc/permissions/com.motorola.motosignature.xml",
+    filename_from_src: true,
+    product_specific: true,
+}
+
+prebuilt_etc {
+    name: "deviceowner-configuration-com.motorola.camera2",
+    owner: "motorola",
+    sub_dir: "permissions",
+    src: "proprietary/product/etc/permissions/deviceowner-configuration-com.motorola.camera2.xml",
+    filename_from_src: true,
+    product_specific: true,
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-com.motorola.camera2",
+    owner: "motorola",
+    sub_dir: "permissions",
+    src: "proprietary/product/etc/permissions/privapp-permissions-com.motorola.camera2.xml",
+    filename_from_src: true,
+    product_specific: true,
+}
+
+prebuilt_etc {
+    name: "hiddenapi-whitelist-com.motorola.camera2",
+    owner: "motorola",
+    sub_dir: "sysconfig",
+    src: "proprietary/product/etc/sysconfig/hiddenapi-whitelist-com.motorola.camera2.xml",
+    filename_from_src: true,
+    product_specific: true,
+}
+
+prebuilt_etc {
+    name: "public.libraries-motocamera",
+    owner: "motorola",
+    src: "proprietary/product/etc/public.libraries-motocamera.txt",
+    filename_from_src: true,
+    product_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmcf_native_window_helper.motocamera",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+    	    android_arm: {
+    	    	srcs: ["proprietary/product/lib/libmcf_native_window_helper.motocamera.so"],
+	    },
+	    android_arm64: {
+    	    	srcs: ["proprietary/product/lib64/libmcf_native_window_helper.motocamera.so"],
+	    },
+    },
+    required: [
+        "public.libraries-motocamera",
+    ],
+    compile_multilib: "both",
+    prefer: true,
+    product_specific: true,
+}
+
+dex_import {
+    name: "com.motorola.androidx.camera.extensions",
+    owner: "motorola",
+    jars: ["proprietary/product/framework/com.motorola.androidx.camera.extensions.jar"],
+    required: [
+        "com.motorola.androidx.camera.extensions_permissions",
+    ],
+    product_specific: true,
+}
+
+dex_import {
+    name: "com.motorola.motosignature",
+    owner: "motorola",
+    jars: ["proprietary/product/framework/com.motorola.motosignature.jar"],
+    required: [
+        "com.motorola.motosignature_permissions",
+    ],
+    product_specific: true,
+}
+
