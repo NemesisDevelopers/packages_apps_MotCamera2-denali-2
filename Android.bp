@@ -32,7 +32,6 @@ android_app_import {
         "com.motorola.motosignature_permissions",
         "com.motorola.motosignature",
     ],
-    product_specific: true,
 }
 
 prebuilt_etc {
@@ -59,7 +58,6 @@ prebuilt_etc {
     sub_dir: "permissions",
     src: "proprietary/etc/permissions/com.motorola.motosignature.xml",
     filename_from_src: true,
-    product_specific: true,
 }
 
 prebuilt_etc {
@@ -136,6 +134,5 @@ dex_import {
     required: [
         "com.motorola.motosignature_permissions",
     ],
-    product_specific: true,
 }
 
