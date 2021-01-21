@@ -114,6 +114,7 @@ cc_prebuilt_library_shared {
         "public.libraries-motocamera",
     ],
     compile_multilib: "both",
+    check_elf_files: false,
     prefer: true,
     product_specific: true,
 }
