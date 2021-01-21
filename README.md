@@ -16,7 +16,7 @@ Compatible Devices:
 
 To clone:
 
-`git clone https://gitlab.com/NemesisDevelopers/moto-camera/motorola_camera2_denali-2.git -b ten-arm64 packages/apps/MotCamera2`
+`git clone https://gitlab.com/NemesisDevelopers/moto-camera/motorola_camera2_denali-2.git -b eleven-arm64 packages/apps/MotCamera2`
 
 &
 
@@ -28,7 +28,7 @@ Add this in your dependencies:
  {
    "repository": "motorola_camera2_denali-2",
    "target_path": "packages/apps/MotCamera2",
-   "branch": "ten-arm64",
+   "branch": "eleven-arm64",
    "remote": "moto-camera"
  }
 ```
