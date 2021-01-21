@@ -18,6 +18,10 @@ To clone:
 
 `git clone https://gitlab.com/NemesisDevelopers/moto-camera/motorola_camera2_denali-2.git -b ten-arm64 packages/apps/MotCamera2`
 
+&
+
+`git clone https://gitlab.com/NemesisDevelopers/moto-camera/motorola_camera2_overlay.git -b ten packages/apps/MotCamera2-overlay`
+
 Add this in your dependencies:
 
 ```
