@@ -21,20 +21,6 @@ android_app_import {
     overrides: ["Snap", "Snap2", "SnapdragonCamera", "SnapdragonCamera2", "Camera", "Camera2"],
 }
 
-android_app_import {
-    name: "MotoSignatureApp",
-    owner: "motorola",
-    apk: "proprietary/app/MotoSignatureApp/MotoSignatureApp.apk",
-    presigned: true,
-    dex_preopt: {
-        enabled: false,
-    },
-    required: [
-        "com.motorola.motosignature_permissions",
-        "com.motorola.motosignature",
-    ],
-}
-
 prebuilt_etc {
     name: "com.motorola.androidx.camera.extensions_permissions",
     owner: "motorola",
@@ -51,14 +37,6 @@ prebuilt_etc {
     src: "proprietary/product/etc/permissions/com.motorola.camera2.denali.xml",
     filename_from_src: true,
     product_specific: true,
-}
-
-prebuilt_etc {
-    name: "com.motorola.motosignature_permissions",
-    owner: "motorola",
-    sub_dir: "permissions",
-    src: "proprietary/etc/permissions/com.motorola.motosignature.xml",
-    filename_from_src: true,
 }
 
 prebuilt_etc {
@@ -127,14 +105,5 @@ dex_import {
         "com.motorola.androidx.camera.extensions_permissions",
     ],
     product_specific: true,
-}
-
-dex_import {
-    name: "com.motorola.motosignature",
-    owner: "motorola",
-    jars: ["proprietary/framework/com.motorola.motosignature.jar"],
-    required: [
-        "com.motorola.motosignature_permissions",
-    ],
 }
 

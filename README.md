@@ -18,9 +18,9 @@ To clone:
 
 `git clone https://gitlab.com/NemesisDevelopers/moto-camera/motorola_camera2_denali-2.git -b eleven-arm64 packages/apps/MotCamera2`
 
-&
-
 `git clone https://gitlab.com/NemesisDevelopers/moto-camera/motorola_camera2_overlay.git -b ten packages/apps/MotCamera2-overlay`
+
+`git clone https://gitlab.com/NemesisDevelopers/motorola/motorola_motosignatureapp.git -b eleven packages/apps/MotoSignatureApp`
 
 Add this in your dependencies:
 
@@ -43,4 +43,4 @@ PRODUCT_PACKAGES += \
 # [Download & info](https://telegra.ph/Moto-Camera-2-List-N3-05-09)
 
 
- Copyright © 2020 Nemesis Team
+ Copyright © 2020-2021 Nemesis Team
