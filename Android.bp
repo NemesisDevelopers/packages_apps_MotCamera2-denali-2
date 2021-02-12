@@ -69,9 +69,9 @@ prebuilt_etc {
 prebuilt_etc {
     name: "public.libraries-motocamera",
     owner: "motorola",
-    src: "proprietary/product/etc/public.libraries-motocamera.txt",
+    src: "proprietary/system_ext/etc/public.libraries-motocamera.txt",
     filename_from_src: true,
-    product_specific: true,
+    system_ext_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -82,10 +82,10 @@ cc_prebuilt_library_shared {
     },
     target: {
     	    android_arm: {
-    	    	srcs: ["proprietary/product/lib/libmcf_native_window_helper.motocamera.so"],
+    	    	srcs: ["proprietary/system_ext/lib/libmcf_native_window_helper.motocamera.so"],
 	    },
 	    android_arm64: {
-    	    	srcs: ["proprietary/product/lib64/libmcf_native_window_helper.motocamera.so"],
+    	    	srcs: ["proprietary/system_ext/lib64/libmcf_native_window_helper.motocamera.so"],
 	    },
     },
     required: [
@@ -94,7 +94,7 @@ cc_prebuilt_library_shared {
     compile_multilib: "both",
     check_elf_files: false,
     prefer: true,
-    product_specific: true,
+    system_ext_specific: true,
 }
 
 dex_import {
