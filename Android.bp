@@ -10,6 +10,7 @@ android_app_import {
     required: [
         "MotCamera2-overlay",
         "MotoSignatureApp",
+        "init.motcamera2.rc",
         "com.motorola.camera2.denali",
         "deviceowner-configuration-com.motorola.camera2",
         "privapp-permissions-com.motorola.camera2",
@@ -19,6 +20,15 @@ android_app_import {
     ],
     product_specific: true,
     overrides: ["Snap", "Snap2", "SnapdragonCamera", "SnapdragonCamera2", "Camera", "Camera2"],
+}
+
+prebuilt_etc {
+    name: "init.motcamera2.rc",
+    owner: "motorola",
+    sub_dir: "init",
+    src: "proprietary/product/etc/init/init.motcamera2.rc",
+    filename_from_src: true,
+    product_specific: true,
 }
 
 prebuilt_etc {
