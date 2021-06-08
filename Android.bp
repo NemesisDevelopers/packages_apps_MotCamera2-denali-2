@@ -8,7 +8,7 @@ android_app_import {
     },
     privileged: true,
     required: [
-        "MotCamera2-overlay",
+        "MotCamera2Tunner",
         "MotoSignatureApp",
         "init.motcamera2.rc",
         "com.motorola.camera2.denali",
